@@ -1,0 +1,12 @@
+{
+  "name": "sukigree/328/application",
+  "authors": [
+    {
+      "name": "Sukanvisa Pearyoo",
+      "email": "Pearyoo.Sukanvisa@student.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
