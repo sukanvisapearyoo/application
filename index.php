@@ -20,6 +20,14 @@ $f3 -> route ('GET / ', function (){
 
 
 });
+//Define a default route ('home page' for hello project)
+$f3 -> route ('GET /personalInfo', function (){
+
+    $view = new Template();
+    echo $view -> render ('views/personalInfo.html');
+
+
+});
 //run fatfree
 $f3 ->run();
 
