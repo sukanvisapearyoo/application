@@ -1,0 +1,65 @@
+body{
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+
+}
+#compname{
+    padding-top: 5%;
+    padding-left: 5%;
+    display: inline-block;
+}
+#one{
+    /*padding-top: 5%;*/
+    padding-bottom: 2%;
+    text-align: center;
+    display: flex;
+}
+
+#button{
+    text-align: center;
+
+}
+.btn-primary{
+    background-color: #6c6c6e;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    opacity: 1;
+}
+
+#parag{
+    text-align: center;
+}
+#padding{
+    padding: 1% 5% 2%;
+}
+#line{
+    border: none;
+    border-top: 1px dotted black;
+}
+#nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+
+}
+#nav{
+
+    left: 0px;
+    display: flex;
+    justify-content: center;
+
+}
+
+
