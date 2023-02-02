@@ -25,11 +25,26 @@ $f3 -> route ('GET /personalInfo', function (){
     $view = new Template();
     echo $view -> render ('views/personalInfo.html');
 });
-//Define a default route ('personal info' for hello project)
-$f3 -> route ('GET /summary', function (){
+
+//Define a default route ('experience')
+$f3 -> route ('GET /experience', function (){
 
     $view = new Template();
-    echo $view -> render ('views/summary-form.html');
+    echo $view -> render ('views/experience.html');
+});
+
+//Define a default route ('mailing')
+$f3 -> route ('GET /mailing', function (){
+
+    $view = new Template();
+    echo $view -> render ('views/mailingList.html');
+});
+
+//Define a default route ('sum')
+$f3 -> route ('GET /sum', function (){
+
+    $view = new Template();
+    echo $view -> render ('views/summary.html');
 });
 
 
