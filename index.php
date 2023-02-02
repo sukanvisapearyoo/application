@@ -17,17 +17,23 @@ $f3 -> route ('GET / ', function (){
 
     $view = new Template();
     echo $view -> render ('views/home.html');
-
-
 });
-//Define a default route ('home page' for hello project)
+
+//Define a default route ('personal info' for hello project)
 $f3 -> route ('GET /personalInfo', function (){
 
     $view = new Template();
     echo $view -> render ('views/personalInfo.html');
-
-
 });
+//Define a default route ('personal info' for hello project)
+$f3 -> route ('GET /summary', function (){
+
+    $view = new Template();
+    echo $view -> render ('views/summary-form.html');
+});
+
+
+
 //run fatfree
 $f3 ->run();
 
