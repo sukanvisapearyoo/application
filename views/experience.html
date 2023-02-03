@@ -27,39 +27,59 @@
       <form action="#" method="POST">
     <div class="row">
       <div class="col-8">
-        <textarea id="bio" name="bio" class="form-control h-100" style="height: 250px;"></textarea>
+        <h6><b>Biography</b></h6>
+        <textarea id="bio" name="bio"></textarea>
       </div>
+      <br>
+<br>
 
         <div class="col-4 ">
             <div class="row">
-                <label for="github">Github Link</label><br>
-                <input type="text" id="github" name="github" placeholder="github.com/my_github"><br><br>
+                <label for="github"><b>Github Link</b></label><br>
+                <input type="text" id="github" name="github" placeholder="github.com/my_github">
               </div>
-              <div class="">
-                <label for="yrexperience">Years Experience </label><br>
-                <input type="radio" id="yrexperience" name="yrexperience" > <label for="yrexperience">0-2</label>
-                <input type="radio" id="yrexperience" name="yrexperience" > <label for="yrexperience">2-4</label>
-                <input type="radio" id="yrexperience" name="yrexperience" > <label for="yrexperience">4+</label><br>
-              </div>
+          <br>
+              <div class="row" id="radio1">
+                <fieldset>
+                  <h6><b>Years Experience</b></h6>
+                  <div>
+                    <input type="radio" id="yrexperience1" name="radio-yr" value="0-2" id="0-2" />
+                    <label for="yrexperience1">0-2</label>
+
+                    <input type="radio" id="yrexperience2" name="radio-yr" value="2-4" id="2-4" />
+                    <label for="yrexperience2">2-4</label>
+
+                    <input type="radio" id="yrexperience3" name="radio-yr" value="4" id="4" />
+                    <label for="yrexperience3">4+</label>
+                  </div>
+                </fieldset>
+
+                <div class="row" id="radio2">
+                  <fieldset>
+                    <br>
+
+                    <h6><b>Willing To Relocate</b></h6>
+                    <div>
+                      <input type="radio" id="yes" name="radio-locate" value="yes" id="yes" />
+                      <label for="yrexperience1">Yes</label>
+
+                      <input type="radio" id="no" name="radio-yr" value="no" id="no" />
+                      <label for="yrexperience2">No</label>
+
+                      <input type="radio" id="maybe" name="radio-yr" value="maybe" id="maybe" />
+                      <label for="yrexperience3">Maybe</label>
+                    </div>
+                  </fieldset>
+                 </div>
+               </div>
+          <br>
+             <div class="col-4">
+
+            <a type = "button" class=" btn btn-primary" id="secbutton"
+               href="mailing">Next ></a>
             </div>
-            <div class="row">
-              <div class="col-12">
-                <label for="email" class="control-label"><b>Email</b></label>
-                <input class="form-control" type="text" name="email" id="email">
-              </div>
-            </div>
-
-          </div>
-
-
-          <div class="col-4">
-
-            <a type = "button" class=" btn btn-primary"
-               href="experience">Next ></a>
-          </div>
-
-
-
+        </div>
+    </div>
       </form>
 
     </div>

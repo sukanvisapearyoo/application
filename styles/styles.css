@@ -75,7 +75,7 @@ img {
 
 #nav a:hover {
     background-color:#6c6c6e;
-    color:#fff;
+    color: #3a6572;
     opacity: 5%;
     transition: 0.3s;
     display: inline-block;
@@ -106,8 +106,25 @@ img {
 .backgroundColor{
     background-color: #f6f6f6;
     border-radius: 15px;
-    padding: 30px;
-
+    /*padding: 30px;*/
+    padding-bottom: 30px;
+    padding-right: 10px;
 }
-
+/*experience page*/
+#secbutton{
+    width: 100%;
+    display: block;
+}
+#bio{
+    display: block;
+    width: 100%;
+    height: 90%;
+}
+#github{
+    border-radius: 10px;
+    width: 80%;
+    line-height: 1.5;
+    border: #6c6c6e;
+    padding: 0.5rem;
+}
 
