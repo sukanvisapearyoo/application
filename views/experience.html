@@ -8,43 +8,67 @@
 <body>
 <div class = "container-fluid">
 
-  <form action="#" method="get" class="form-horizontal">
+  <div class="row" id = "infohead">
+    <div id ="compname" class="col-sm-12 ">
+      <div>
+        <p>The Pacific Northwest</p>
+      </div>
 
-    <label for="bio">Biography</label><br>
-    <input type="text" id="bio" name="bio" ><br>
+    </div>
+    <div class="row" id = "one">
+      <div id ="name" class="col-sm-12 col-md-6">
+        <h2>Software Development Internship</h2>
+      </div>
+    </div>
 
-    <label for="github">Github Link</label><br>
-    <input type="text" id="github" name="github" placeholder="github.com/my_github"><br><br>
+    <div class="backgroundColor">
+      <h4 class="tittle">Experience</h4>
+      <hr>
+      <form action="#" method="POST">
+    <div class="row">
+      <div class="col-8">
+        <textarea id="bio" name="bio" class="form-control h-100" style="height: 250px;"></textarea>
+      </div>
+
+        <div class="col-4 ">
+            <div class="row">
+                <label for="github">Github Link</label><br>
+                <input type="text" id="github" name="github" placeholder="github.com/my_github"><br><br>
+              </div>
+              <div class="">
+                <label for="yrexperience">Years Experience </label><br>
+                <input type="radio" id="yrexperience" name="yrexperience" > <label for="yrexperience">0-2</label>
+                <input type="radio" id="yrexperience" name="yrexperience" > <label for="yrexperience">2-4</label>
+                <input type="radio" id="yrexperience" name="yrexperience" > <label for="yrexperience">4+</label><br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <label for="email" class="control-label"><b>Email</b></label>
+                <input class="form-control" type="text" name="email" id="email">
+              </div>
+            </div>
+
+          </div>
 
 
-    <label for="yrexperience">Years Experience </label><br>
-    <input type="radio" id="yrexperience" name="yrexperience" > <label for="yrexperience">0-2</label>
-    <input type="radio" id="yrexperience" name="yrexperience" > <label for="yrexperience">2-4</label>
-    <input type="radio" id="yrexperience" name="yrexperience" > <label for="yrexperience">4+</label><br>
+          <div class="col-4">
+
+            <a type = "button" class=" btn btn-primary"
+               href="experience">Next ></a>
+          </div>
 
 
-    <label for="relocate">Willing to Relocate</label><br>
-    <input type="radio" id="relocate" name="relocate" ><label for="yrexperience">Yes</label>
-    <input type="radio" id="relocate" name="relocate" ><label for="yrexperience">No</label>
-    <input type="radio" id="relocate" name="relocate" ><label for="yrexperience">Maybe</label>
-    <br><br>
 
+      </form>
 
-    <a type = "button" class=" btn btn-primary"
-       href="mailing">Next > </a>
-
-  </form>
-
-</div>
-<footer>
-  <br>
-</footer>
+    </div>
 
 
 
 
 
-</div>
+  </div>
 </div>
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

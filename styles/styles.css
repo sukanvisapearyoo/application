@@ -25,7 +25,7 @@ img {
 
 }
 .btn-primary{
-    background-color: #6c6c6e;
+    background-color: #72919d;
     opacity: 0.6;
     transition: 0.3s;
     display: inline-block;
@@ -82,9 +82,32 @@ img {
     text-decoration: none;
     cursor: pointer;
     border-radius: 20px;
-
-
 }
 
+/*personal info page*/
+
+#personaldes {
+    border-radius: 5px;
+    color: #1d1d1e;
+    background-color: lightgray;
+}
+#infohead{
+    padding: 10%;
+}
+
+.tittle{
+    padding-top: 2%;
+}
+
+.personalbox{
+    color: #cbcbcb;
+}
+
+.backgroundColor{
+    background-color: #f6f6f6;
+    border-radius: 15px;
+    padding: 30px;
+
+}
 
 
