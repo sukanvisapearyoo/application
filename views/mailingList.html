@@ -6,46 +6,148 @@
 <include href="views/header.html"></include>
 
 <body>
+
+<!--Sukanvisa Pearyoo
+    Jan 20 2023
+    Project: Job application for software developers to apply-->
+
+<include href="views/header.html"></include>
+
+
 <div class = "container-fluid">
 
-    <h2>Job Opening Mailing Lists</h2>
-
-    <form action="#" method="get" class="form-horizontal">
-        <label for="softwarelisting">Software Development Jobs</label><br>
-        <input type="radio" id="softwarelisting" name="relocate" ><label for="softwarelisting">JavaScript</label>
-        <input type="radio" id="softwarelisting" name="relocate" ><label for="softwarelisting">PHP</label>
-        <input type="radio" id="softwarelisting" name="relocate" ><label for="softwarelisting">Java</label>
-        <input type="radio" id="softwarelisting" name="relocate" ><label for="softwarelisting">Python</label>
-
-        <input type="radio" id="softwarelisting" name="relocate" ><label for="softwarelisting">HTML</label>
-        <input type="radio" id="softwarelisting" name="relocate" ><label for="softwarelisting">CSS</label>
-        <input type="radio" id="softwarelisting" name="relocate" ><label for="softwarelisting">ReactJS</label>
-        <input type="radio" id="softwarelisting" name="relocate" ><label for="softwarelisting">NodeJS</label>
-
-
-        <label for="industry">Industry Verticals</label><br>
-        <input type="radio" id="industry" name="industry" ><label for="industry">PHP</label>
-        <input type="radio" id="industry" name="industry" ><label for="industry">Java</label>
-        <input type="radio" id="industry" name="industry" ><label for="industry">Python</label>
-
-        <input type="radio" id="industry" name="industry" ><label for="industry">HTML</label>
-        <input type="radio" id="industry" name="industry" ><label for="industry">CSS</label>
-        <input type="radio" id="industry" name="relocate" ><label for="industry">JavaScript</label>
-
-
-        <a type = "button" class=" btn btn-primary"
-           href="sum">Next ></a>
-
-
-
-
-        <br><br>
-    </form>
+    <div class="row" id = "head">
+        <div id ="compname" class="col-sm-12 ">
+            <div>
+                <p>The Pacific Northwest</p>
+            </div>
 
         </div>
-        <footer>
-            <br>
-        </footer>
+
+        <div class="row" id = "one">
+            <div  id ="name" class="col-sm-8 ">
+                <h1>Software Development Internship</h1>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class = "row">
+        <div class="col-sm-12 col-md-6" id="padding">
+            <div id="nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Expectation</a></li>
+                    <li><a href="">Our Team</a></li>
+                </ul>
+                <br>
+            </div>
+        </div>
+
+        <div class="backgroundColor">
+            <h4 class="tittle">Job Opening Mailing List</h4>
+            <hr>
+            <form action="#" method="POST">
+                <div class="row" id="radio-btn-jobs">
+                    <div class="col-8">
+                        <h6><b>Software Development Jobs</b></h6>
+                    </div>
+                    <br>
+                    <div class="row" id="line1">
+                    <div class="col-3">
+                        <input type="checkbox" id="js" name="mail[]" value="js">
+                        <label for="js"> JavaScript</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="checkbox" id="php" name="mail[]" value="PHP">
+                            <label for="php"> PHP</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="checkbox" id="java" name="mail[]" value="java">
+                            <label for="java"> Java</label>
+                        </div>
+                        <div class="col-3">
+                        <input type="checkbox" id="python" name="mail[]" value="python">
+                        <label for="python"> Python</label>
+                    </div>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="row" id="line2">
+                        <div class="col-3">
+                            <input type="checkbox" id="html" name="mail[]" value="html">
+                            <label for="html"> HTML</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="checkbox" id="css" name="mail[]" value="css">
+                            <label for="css"> CSS</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="checkbox" id="react" name="mail[]" value="react">
+                            <label for="react"> Reactjs</label>
+                        </div>
+                        <div class="col-3">
+                            <input type="checkbox" id="node" name="mail[]" value="node">
+                            <label for="node"> NodeJs</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <h6><b>Industry Verticals</b></h6>
+                        </div>
+                        <br>
+                        <div class="row" id="line3">
+                            <div class="col-3">
+                                <input type="checkbox" id="saas" name="mail[]" value="saas">
+                                <label for="saas"> Saas</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="checkbox" id="health" name="mail[]" value="health">
+                                <label for="health"> Health Tech</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="checkbox" id="ag" name="mail[]" value="ag">
+                                <label for="ag"> Ag Tech</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="checkbox" id="hr" name="mail[]" value="hr">
+                                <label for="hr"> Hr Tech</label>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="row" id="line4">
+                            <div class="col-3">
+                                <input type="checkbox" id="industrial" name="mail[]" value="industrial">
+                                <label for="industrial"> Industrial Tech</label>
+                            </div>
+                            <div class="col-3">
+                                <input type="checkbox" id="cyber" name="mail[]" value="cyber">
+                                <label for="cyber"> Cyber Security</label>
+                            </div>
+                        </div>
+
+                        <br>
+                        <br>
+
+                        <div class="row">
+                        <div class="col-8">
+                        </div>
+                        <div class="col-4">
+                            <a type = "button" class=" btn btn-primary" id="secbutton"
+                               href="sum">Next ></a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <br>
+
 
 
 
@@ -58,5 +160,6 @@
 
 </body>
 </html>
+
 
 
