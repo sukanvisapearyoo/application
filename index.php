@@ -77,7 +77,7 @@ $f3->route('GET|POST /mailing', function($f3){
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         //Move the data from Post array to the SESSION array
-        $_SESSION['mail'] = $_POST['mail'];
+        $_SESSION['mail'] = implode(", ",$_POST['mail']);
 
         //Redirect to summary page
         $f3->reroute('sum');
