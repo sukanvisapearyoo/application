@@ -1,19 +1,19 @@
 <?php
-//this is my CONTROLLER for the hello project
+//this is my CONTROLLER
 
 //turn on error reporting
 ini_set('display_errors',1);
 error_reporting(E_ALL);
 
 
-//require the autoload file
-require_once ('vendor/autoload.php');
-
 
 //Start the session
 session_start();
 //var_dump($_SESSION);
 
+
+//require the autoload file
+require_once ('vendor/autoload.php');
 
 
 
@@ -58,8 +58,8 @@ $f3->route('GET|POST /experience', function($f3){
         //Move the data from Post array to the SESSION array
         $_SESSION['bio'] = $_POST['bio'];
         $_SESSION['github'] = $_POST['github'];
-        $_SESSION['radio-yr'] = $_POST['radio-yr'];
-        $_SESSION['radio-relocate'] = $_POST['radio-relocate'];
+        $_SESSION['years'] = $_POST['years'];
+        $_SESSION['locate'] = $_POST['locate'];
 
 
         //Redirect to summary page
@@ -77,7 +77,7 @@ $f3->route('GET|POST /mailing', function($f3){
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         //Move the data from Post array to the SESSION array
-        $_SESSION['mail[]'] = $_POST['mail'];
+        $_SESSION['mail'] = $_POST['mail'];
 
         //Redirect to summary page
         $f3->reroute('sum');
