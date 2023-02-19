@@ -55,78 +55,94 @@
                     </div>
                     <br>
                     <div class="row" id="line1">
-                    <div class="col-3">
-                        <input type="checkbox" id="js" name="mail[]" value="js">
-                        <label for="js"> JavaScript</label>
+                    <div class="col">
+                        <repeat group="{{@mailing1}}" value="{{@mailing1}}">
+                        <label><input type="checkbox"  name="mail[]" value="{{@mailing1}}"> {{@mailing1}}</label>
+                        </repeat>
                         </div>
-                        <div class="col-3">
-                            <input type="checkbox" id="php" name="mail[]" value="PHP">
-                            <label for="php"> PHP</label>
-                        </div>
-                        <div class="col-3">
-                            <input type="checkbox" id="java" name="mail[]" value="java">
-                            <label for="java"> Java</label>
-                        </div>
-                        <div class="col-3">
-                        <input type="checkbox" id="python" name="mail[]" value="python">
-                        <label for="python"> Python</label>
-                    </div>
+<!--                        <div class="col-3">-->
+<!--                            <input type="checkbox" id="php" name="mail[]" value="PHP">-->
+<!--                            <label for="php"> PHP</label>-->
+<!--                        </div>-->
+<!--                        <div class="col-3">-->
+<!--                            <input type="checkbox" id="java" name="mail[]" value="java">-->
+<!--                            <label for="java"> Java</label>-->
+<!--                        </div>-->
+<!--                        <div class="col-3">-->
+<!--                        <input type="checkbox" id="python" name="mail[]" value="python">-->
+<!--                        <label for="python"> Python</label>-->
+
                     </div>
                     <br>
                     <br>
 
                     <div class="row" id="line2">
-                        <div class="col-3">
-                            <input type="checkbox" id="html" name="mail[]" value="html">
-                            <label for="html"> HTML</label>
+                        <div class="col-12">
+                            <repeat group="{{@mailing2}}" value="{{@mailing2}}">
+                                <label><input type="checkbox"  name="mail[]" value="{{@mailing2}}"> {{@mailing2}}</label>
+                            </repeat>
                         </div>
-                        <div class="col-3">
-                            <input type="checkbox" id="css" name="mail[]" value="css">
-                            <label for="css"> CSS</label>
-                        </div>
-                        <div class="col-3">
-                            <input type="checkbox" id="react" name="mail[]" value="react">
-                            <label for="react"> Reactjs</label>
-                        </div>
-                        <div class="col-3">
-                            <input type="checkbox" id="node" name="mail[]" value="node">
-                            <label for="node"> NodeJs</label>
-                        </div>
+<!--                        <div class="col-3">-->
+<!--                            <input type="checkbox" id="html" name="mail[]" value="html">-->
+<!--                            <label for="html"> HTML</label>-->
+<!--                        </div>-->
+<!--                        <div class="col-3">-->
+<!--                            <input type="checkbox" id="css" name="mail[]" value="css">-->
+<!--                            <label for="css"> CSS</label>-->
+<!--                        </div>-->
+<!--                        <div class="col-3">-->
+<!--                            <input type="checkbox" id="react" name="mail[]" value="react">-->
+<!--                            <label for="react"> Reactjs</label>-->
+<!--                        </div>-->
+<!--                        <div class="col-3">-->
+<!--                            <input type="checkbox" id="node" name="mail[]" value="node">-->
+<!--                            <label for="node"> NodeJs</label>-->
+<!--                        </div>-->
                     </div>
                     <div class="row">
                         <div class="col-8">
                             <h6><b>Industry Verticals</b></h6>
                         </div>
                         <br>
-                        <div class="row" id="line3">
-                            <div class="col-3">
-                                <input type="checkbox" id="saas" name="mail[]" value="saas">
-                                <label for="saas"> Saas</label>
-                            </div>
-                            <div class="col-3">
-                                <input type="checkbox" id="health" name="mail[]" value="health">
-                                <label for="health"> Health Tech</label>
-                            </div>
-                            <div class="col-3">
-                                <input type="checkbox" id="ag" name="mail[]" value="ag">
-                                <label for="ag"> Ag Tech</label>
-                            </div>
-                            <div class="col-3">
-                                <input type="checkbox" id="hr" name="mail[]" value="hr">
-                                <label for="hr"> Hr Tech</label>
-                            </div>
+                        <div class="col-12">
+                            <repeat group="{{@mailing3}}" value="{{@mailing3}}">
+                                <label><input type="checkbox"  name="mail[]" value="{{@mailing3}}"> {{@mailing3}}</label>
+                            </repeat>
+                        </div>
+<!--                        <div class="row" id="line3">-->
+<!--                            <div class="col-3">-->
+<!--                                <input type="checkbox" id="saas" name="mail[]" value="saas">-->
+<!--                                <label for="saas"> Saas</label>-->
+<!--                            </div>-->
+<!--                            <div class="col-3">-->
+<!--                                <input type="checkbox" id="health" name="mail[]" value="health">-->
+<!--                                <label for="health"> Health Tech</label>-->
+<!--                            </div>-->
+<!--                            <div class="col-3">-->
+<!--                                <input type="checkbox" id="ag" name="mail[]" value="ag">-->
+<!--                                <label for="ag"> Ag Tech</label>-->
+<!--                            </div>-->
+<!--                            <div class="col-3">-->
+<!--                                <input type="checkbox" id="hr" name="mail[]" value="hr">-->
+<!--                                <label for="hr"> Hr Tech</label>-->
+<!--                            </div>-->
                         </div>
                         <br>
                         <br>
                         <div class="row" id="line4">
-                            <div class="col-3">
-                                <input type="checkbox" id="industrial" name="mail[]" value="industrial">
-                                <label for="industrial"> Industrial Tech</label>
+                            <div class="col-12">
+                                <repeat group="{{@mailing4}}" value="{{@mailing4}}">
+                                    <label><input type="checkbox"  name="mail[]" value="{{@mailing4}}"> {{@mailing4}}</label>
+                                </repeat>
                             </div>
-                            <div class="col-3">
-                                <input type="checkbox" id="cyber" name="mail[]" value="cyber">
-                                <label for="cyber"> Cyber Security</label>
-                            </div>
+<!--                            <div class="col-3">-->
+<!--                                <input type="checkbox" id="industrial" name="mail[]" value="industrial">-->
+<!--                                <label for="industrial"> Industrial Tech</label>-->
+<!--                            </div>-->
+<!--                            <div class="col-3">-->
+<!--                                <input type="checkbox" id="cyber" name="mail[]" value="cyber">-->
+<!--                                <label for="cyber"> Cyber Security</label>-->
+<!--                            </div>-->
                         </div>
 
                         <br>

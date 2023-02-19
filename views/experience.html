@@ -54,21 +54,27 @@
             <div class="row">
                 <label for="github"><b>Github Link</b></label><br>
                 <input type="text" id="github" name="github" placeholder="github.com/my_github">
+              <check if= "{{isset (@errors['github'])}}">
+                <span class="err">{{@errors ['github'] }}</span>
+              </check>
               </div>
           <br>
               <div class="row" id="radio1">
                 <fieldset>
                   <h6><b>Years Experience</b></h6>
-                  <div>
-                    <input type="radio" id="yrexperience1" name="years" value="0-2" id="0-2" />
-                    <label for="yrexperience1">0-2</label>
+                  <repeat group="{{@yearsEx}}" value="{{@yearsEx}}">
+                    <label><input type="radio"  name="mail[]" value="{{@yearsEx}}"> {{@yearsEx}}</label>
+                  </repeat>
+<!--                  <div>-->
+<!--                    <input type="radio" id="yrexperience1" name="years" value="0-2" id="0-2" />-->
+<!--                    <label for="yrexperience1">0-2</label>-->
 
-                    <input type="radio" id="yrexperience2" name="years" value="2-4" id="2-4" />
-                    <label for="yrexperience2">2-4</label>
+<!--                    <input type="radio" id="yrexperience2" name="years" value="2-4" id="2-4" />-->
+<!--                    <label for="yrexperience2">2-4</label>-->
 
-                    <input type="radio" id="yrexperience3" name="years" value="4" id="4" />
-                    <label for="yrexperience3">4+</label>
-                  </div>
+<!--                    <input type="radio" id="yrexperience3" name="years" value="4" id="4" />-->
+<!--                    <label for="yrexperience3">4+</label>-->
+<!--                  </div>-->
                 </fieldset>
 
                 <div class="row" id="radio2">
@@ -77,14 +83,17 @@
 
                     <h6><b>Willing To Relocate</b></h6>
                     <div>
-                      <input type="radio" id="yes" name="locate" value="yes" id="yes" />
-                      <label for="yrexperience1">Yes</label>
+                      <repeat group="{{@relocate}}" value="{{@relocate}}">
+                        <label><input type="radio"  name="mail[]" value="{{@relocate}}"> {{@relocate}}</label>
+                      </repeat>
+<!--                      <input type="radio" id="yes" name="locate" value="yes" id="yes" />-->
+<!--                      <label for="yrexperience1">Yes</label>-->
 
-                      <input type="radio" id="no" name="locate" value="no" id="no" />
-                      <label for="yrexperience2">No</label>
+<!--                      <input type="radio" id="no" name="locate" value="no" id="no" />-->
+<!--                      <label for="yrexperience2">No</label>-->
 
-                      <input type="radio" id="maybe" name="locate" value="maybe" id="maybe" />
-                      <label for="yrexperience3">Maybe</label>
+<!--                      <input type="radio" id="maybe" name="locate" value="maybe" id="maybe" />-->
+<!--                      <label for="yrexperience3">Maybe</label>-->
                     </div>
                   </fieldset>
                  </div>

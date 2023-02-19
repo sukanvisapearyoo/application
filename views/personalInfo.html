@@ -50,17 +50,32 @@
                             <div class="col-sm-12 col-md-6">
                                 <label for="fName" class="control-label"><b>First Name</b></label>
                                 <input class="form-control" type="text" name="fName" id="fName">
+
+                                <check if= "{{isset (@errors['fName'])}}">
+                                    <span class="err">{{@errors ['fName'] }}</span>
+                                </check>
                             </div>
+
                             <div class="col-sm-12 col-md-6">
                                 <label for="lName" class="control-label"><b>Last Name</b></label>
                                 <input class="form-control" type="text" name="lName" id="lName">
+
+                                <check if= "{{isset (@errors['lName'])}}">
+                                    <span class="err">{{@errors ['lName'] }}</span>
+                                </check>
                             </div>
+
                         </div>
+
                         <div class="row">
                             <div class="col-12">
                                 <label for="email" class="control-label"><b>Email</b></label>
                                 <input class="form-control" type="text" name="email" id="email">
                             </div>
+                            <p></p>
+                            <check if= "{{isset (@errors['email'])}}">
+                                <span class="err">{{@errors ['email'] }}</span>
+                            </check>
                         </div>
 
                     </div>
@@ -140,7 +155,12 @@
                     <div class="col-4 ">
                         <label for="phone" class="control-label"><b>Phone</b></label>
                         <input class="form-control" type="text" name="phone" id="phone">
+                        <p></p>
+                        <check if= "{{isset (@errors['phone'])}}">
+                            <span class="err">{{@errors ['phone'] }}</span>
+                        </check>
                     </div>
+
 
                     <div class="col-4">
 

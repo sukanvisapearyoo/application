@@ -3,6 +3,10 @@ body{
 div{
     display: block;
 }
+label{
+    margin: 0;
+    padding-right: 18%;
+}
 
 
 img {
@@ -144,3 +148,6 @@ img {
 /*mailing page*/
 
 
+.err{
+    color: #993838;
+}
