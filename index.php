@@ -16,7 +16,14 @@ session_start();
 require_once ('vendor/autoload.php');
 require_once('model/data-layer.php');
 require_once ('model/validate.php');
+//require_once ('classes/applicant.php');
+//require_once ('classes/Applicant_SubscribedToLists.php');
 
+
+/*--Testing--*/
+//$name1 = new Applicant("Kuma","Pearyoo","kumas@gmail.com",
+//"wa","2066014106","www.github.com","years","yes","dlkgfg");
+//var_dump($name1);
 
 
 //create an instance of the Base class
@@ -34,7 +41,7 @@ $f3 -> route ('GET / ', function (){
 
 $f3->route('GET|POST /personalInfo', function($f3){
 
-
+//    $signUp = new Applicant();
 
 
     //If the form has been submitted
@@ -143,7 +150,9 @@ $f3->route('GET|POST /mailing', function($f3){
     //If the form has been submitted
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
+
         //Move the data from Post array to the SESSION array
+
         $_SESSION['mail'] = implode(", ",$_POST['mail']);
 
         //Redirect to summary page
