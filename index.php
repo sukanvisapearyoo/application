@@ -41,16 +41,19 @@ $f3 -> route ('GET / ', function (){
 
 $f3->route('GET|POST /personalInfo', function($f3){
 
-//    $signUp = new Applicant();
+
 
 
     //If the form has been submitted
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $newApp = new Applicant();
 
         $fName= trim($_POST['fName']);
 
         if (validFirstName($fName)){
-            $_SESSION['fName'] = $fName;
+            $newApp->setFName($fName);
+
+//            $_SESSION['fName'] = $fName;
         }
         else{
             $f3 ->set('errors["fName"]',
@@ -60,7 +63,9 @@ $f3->route('GET|POST /personalInfo', function($f3){
         $lName= trim($_POST['lName']);
 
         if (validLastName($lName)){
-            $_SESSION['lName'] = $lName;
+            $newApp->setLName($lName);
+
+//            $_SESSION['lName'] = $lName;
         }
         else{
             $f3 ->set('errors["lName"]',
@@ -70,7 +75,9 @@ $f3->route('GET|POST /personalInfo', function($f3){
         $email= trim($_POST['email']);
 
         if (validLastName($email)){
-            $_SESSION['email'] = $email;
+            $newApp->setEmail($email);
+
+//            $_SESSION['email'] = $email;
         }
         else{
             $f3 ->set('errors["email"]',
@@ -81,7 +88,9 @@ $f3->route('GET|POST /personalInfo', function($f3){
         $phone= trim($_POST['phone']);
 
         if (validPhone($phone)){
-            $_SESSION['phone'] = $phone;
+            $newApp->setPhone($phone);
+
+//            $_SESSION['phone'] = $phone;
         }
         else{
             $f3 ->set('errors["phone"]',
@@ -89,10 +98,8 @@ $f3->route('GET|POST /personalInfo', function($f3){
         }
 
 
-
-
-
         if (empty($f3 -> get('errors'))) {
+            $_SESSION['newApp'] = $newApp;
             $f3->reroute('experience');
         }
 
@@ -153,7 +160,8 @@ $f3->route('GET|POST /mailing', function($f3){
 
         //Move the data from Post array to the SESSION array
 
-        $_SESSION['mail'] = implode(", ",$_POST['mail']);
+        $mailString = implode(", ",$_POST['email']);
+        $_SESSION['newApp']->setEMail($mailString);
 
         //Redirect to summary page
         $f3->reroute('sum');

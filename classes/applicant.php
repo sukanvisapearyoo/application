@@ -12,7 +12,7 @@ class Applicant {
 
     /**
      * @param $_fName
-     * @param $__lName
+     * @param $_lName
      * @param $_email
      * @param $_states
      * @param $_phone
@@ -21,7 +21,8 @@ class Applicant {
      * @param $_relocate
      * @param $_bio
      */
-    public function __construct($_fName, $_lName, $_email, $_states, $_phone, $_github, $_experience, $_relocate, $_bio)
+    public function __construct($_fName = "", $_lName="", $_email = "", $_states = "", $_phone = "",
+                                $_github = "", $_experience = "", $_relocate = "", $_bio = "")
     {
         $this->_fName = $_fName;
         $this->_lName = $_lName;
@@ -110,7 +111,7 @@ class Applicant {
 
 
     /**
-     * @param mixed $fName
+     * @param  $fName
      */
     function setFName($fName)
     {
@@ -118,7 +119,7 @@ class Applicant {
     }
 
     /**
-     * @param mixed $_lName
+     * @param  $_lName
      */
     function setLName($_lName)
     {
@@ -126,7 +127,7 @@ class Applicant {
     }
 
     /**
-     * @param mixed $email
+     * @param  $email
      */
     function setEmail($email)
     {
@@ -134,7 +135,7 @@ class Applicant {
     }
 
     /**
-     * @param mixed $states
+     * @param  $states
      */
     function setStates($states)
     {
@@ -142,7 +143,7 @@ class Applicant {
     }
 
     /**
-     * @param mixed $phone
+     * @param  $phone
      */
     function setPhone($phone)
     {
@@ -150,7 +151,7 @@ class Applicant {
     }
 
     /**
-     * @param mixed $github
+     * @param  $github
      */
     function setGithub($github)
     {
@@ -158,7 +159,7 @@ class Applicant {
     }
 
     /**
-     * @param mixed $experience
+     * @param  $experience
      */
     function setExperience($experience)
     {
@@ -166,7 +167,7 @@ class Applicant {
     }
 
     /**
-     * @param mixed $relocate
+     * @param  $relocate
      */
     function setRelocate($relocate)
     {
@@ -174,7 +175,7 @@ class Applicant {
     }
 
     /**
-     * @param mixed $bio
+     * @param  $bio
      */
     function setBio($bio)
     {

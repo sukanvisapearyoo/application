@@ -16,27 +16,7 @@ function validLastName($lName)
 function validEmail($email) {
     return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
-//function validEmail($email){
-//    if (strpos($email,"@" )!== false)
-//        return true;
-//
-//    return false;
-//}
 
-
-//function validExperience($str)
-//{
-//    // Check if the string is not empty
-//    if (empty($str)) {
-//        return false;
-//    }
-//
-//    // Ensure that the string is alphanumeric
-//    if (!ctype_alnum($str)) {
-//        return false;
-//    }
-//    return false;
-//}
 
 function validPhone($phone){
     // Check that the phone number is in the correct format
