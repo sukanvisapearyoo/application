@@ -54,9 +54,11 @@
             <div class="row">
                 <label for="github"><b>Github Link</b></label><br>
                 <input type="text" id="github" name="github" placeholder="github.com/my_github">
-              <check if= "{{isset (@errors['github'])}}">
-                <span class="err">{{@errors ['github'] }}</span>
+              <p></p>
+              <check if="{{ isset(@errors['github']) }}">
+                <span class="err"> {{ @errors['github'] }}</span>
               </check>
+              <p></p>
               </div>
           <br>
               <div class="row" id="radio1">
@@ -84,8 +86,9 @@
                     <h6><b>Willing To Relocate</b></h6>
                     <div>
                       <repeat group="{{@relocate}}" value="{{@relocate}}">
-                        <label><input type="radio"  name="mail[]" value="{{@relocate}}"> {{@relocate}}</label>
+                        <label><input type="radio" name="relocate" value="{{@relocate}}"> {{@relocate}}&nbsp;</label>
                       </repeat>
+
 <!--                      <input type="radio" id="yes" name="locate" value="yes" id="yes" />-->
 <!--                      <label for="yrexperience1">Yes</label>-->
 

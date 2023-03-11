@@ -9,7 +9,10 @@ error_reporting(E_ALL);
 
 //Start the session
 session_start();
-//var_dump($_SESSION);
+echo "<pre>";
+var_dump($_SESSION);
+var_dump($_POST);
+echo "</pre>";
 
 
 //require the autoload file
@@ -29,89 +32,24 @@ require_once ('model/validate.php');
 //create an instance of the Base class
 $f3 = Base ::instance();
 
+//instantiate a controller class
+$con = new Controller($f3);
+
 
 //Define a default route ('home page' for hello project)
 $f3 -> route ('GET / ', function (){
+    $GLOBALS['con']->home();
 
-    $view = new Template();
-    echo $view -> render ('views/home.html');
+//    $view = new Template();
+//    echo $view -> render ('views/home.html');
 });
 
 //Define a default route ('personal info' for hello project)
 
+
 $f3->route('GET|POST /personalInfo', function($f3){
+    $GLOBALS['con']->personalInfo();
 
-
-
-
-    //If the form has been submitted
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $newApp = new Applicant();
-
-        $fName= trim($_POST['fName']);
-
-        if (validFirstName($fName)){
-            $newApp->setFName($fName);
-
-//            $_SESSION['fName'] = $fName;
-        }
-        else{
-            $f3 ->set('errors["fName"]',
-                'First name must be all alphabet');
-        }
-
-        $lName= trim($_POST['lName']);
-
-        if (validLastName($lName)){
-            $newApp->setLName($lName);
-
-//            $_SESSION['lName'] = $lName;
-        }
-        else{
-            $f3 ->set('errors["lName"]',
-                'Last name must be all alphabet');
-        }
-
-        $email= trim($_POST['email']);
-
-        if (validLastName($email)){
-            $newApp->setEmail($email);
-
-//            $_SESSION['email'] = $email;
-        }
-        else{
-            $f3 ->set('errors["email"]',
-                'Enter a valid email address');
-        }
-
-
-        $phone= trim($_POST['phone']);
-
-        if (validPhone($phone)){
-            $newApp->setPhone($phone);
-
-//            $_SESSION['phone'] = $phone;
-        }
-        else{
-            $f3 ->set('errors["phone"]',
-                'Invalid phone number');
-        }
-
-
-        if (empty($f3 -> get('errors'))) {
-            $_SESSION['newApp'] = $newApp;
-            $f3->reroute('experience');
-        }
-
-//        $f3->reroute('experience');
-
-    }
-    //        $_SESSION['lName'] = $_POST['lName'];
-//        $_SESSION['email'] = $_POST['email'];
-//        $_SESSION['state'] = $_POST['state'];
-//        $_SESSION['phone'] = $_POST['phone'];
-    $view = new Template();
-    echo $view->render('views/personalInfo.html');
 });
 
 
@@ -120,7 +58,7 @@ $f3->route('GET|POST /personalInfo', function($f3){
 $f3->route('GET|POST /experience', function($f3){
 
     $f3->set('yearsEx', array("0-2", "2-4", "4+"));
-    $f3->set('relocate', array("0-2", "2-4", "4+"));
+    $f3->set('relocate', array("yes", "no", "maybe"));
 
 
 
@@ -128,10 +66,31 @@ $f3->route('GET|POST /experience', function($f3){
 
     //If the form has been submitted
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $newApp = new Applicant();
+
+        $github= trim($_POST['github']);
+
+        if (Validate::validGithub($github)){
+            $newApp->setGithub($github);
+
+//            $_SESSION['email'] = $email;
+        }
+        else{
+            $f3 ->set('errors["github"]',
+                'Enter a valid link');
+        }
+
+
+
+        if (empty($f3 -> get('errors'))) {
+            $_SESSION['newApp'] = $newApp;
+            $f3->reroute('experience');
+        }
 
         //Move the data from Post array to the SESSION array
         $_SESSION['bio'] = $_POST['bio'];
-        $_SESSION['github'] = $_POST['github'];
+
+//        $_SESSION['github'] = $_POST['github'];
         $_SESSION['years'] = $_POST['years'];
         $_SESSION['locate'] = $_POST['locate'];
 

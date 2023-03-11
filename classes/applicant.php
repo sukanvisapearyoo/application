@@ -121,9 +121,9 @@ class Applicant {
     /**
      * @param  $_lName
      */
-    function setLName($_lName)
+    function setLName($lName)
     {
-        $this->__lName = $_lName;
+        $this->_lName = $lName;
     }
 
     /**
