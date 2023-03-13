@@ -1,0 +1,48 @@
+<include href="views/header.html"></include>
+<div class="row background2">
+  <div class="col-3">
+  </div>
+
+  <div class="col">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>State</th>
+        <th>Phone</th>
+        <th>GitHub</th>
+        <th>Experience</th>
+        <th>Bio</th>
+        <th>Mailing List Subscriber</th>
+        <th>Mailing List Subscriptions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <repeat group="{{ @applicants }}" value="{{ @applicants }}">
+        <tr>
+          <td>{{ @$applicants ['id'] }}</td>
+          <td>{{ @$applicants['fName'] }}&nbsp;{{ @applicant['lName'] }}</td>
+
+          <td>{{ @$applicants['email'] }}</td>
+          <td>{{ @$applicants['state'] }}</td>
+          <td>{{ @applicant['phone'] }}</td>
+          <td>{{ @applicant['github'] }}</td>
+          <td>{{ @applicant['experience'] }}</td>
+          <td>{{ @applicant['bio'] }}</td>
+          <td>{{ @applicant['mailing_list_signup'] }}</td>
+          <td>{{ @applicant['mailing_lists_subscriptions'] }}</td>
+        </tr>
+      </repeat>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+</div>
+</body>
+
+
+</html>

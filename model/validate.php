@@ -38,6 +38,23 @@
         return preg_match($pattern, $link);
     }
 
+    static function validSelectionsJobs($mail)
+    {
+
+        foreach ($mail as $mailing) {
+            if (!in_array($mailing, DataLayer::getMail())) {
+                return false;
+            }
+
+        }
+        return true;
+    }
+    static function validSignMeUp($signup){
+        if($signup=== "yes"){
+            return true;
+        }
+    }
+
 }
 
 
